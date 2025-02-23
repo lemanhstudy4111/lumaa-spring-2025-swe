@@ -1,11 +1,11 @@
 import pg from "pg";
 import dotenv from "dotenv";
 
-const dotenv = dotenv.config();
+dotenv.config();
 const processEnv = process.env;
 
 //pool connection
-const { Pool, Client } = pg;
+const { Pool } = pg;
 const pool = new Pool({
   user: processEnv.POSTGRES_USER,
   password: processEnv.POSTGRES_PASSWORD,
